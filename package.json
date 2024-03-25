@@ -4,9 +4,9 @@
   "description": "Proyecto de backend de Rolling Recetas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "Natalia Gabriela",
+  "author": "Natalia Lopez",
   "license": "ISC"
 }
