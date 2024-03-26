@@ -4,6 +4,8 @@ import cors from 'cors';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import recetasRouter from './src/routes/recetas.routes.js';
+
 const app = express();
 
 app.set('port', process.env.PORT || 4000);
@@ -19,7 +21,4 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname,'/public')))
 
-app.get('/', (req, res)=>{
-    console.log('procesando una solicitud get')
-    res.send('Respuesta del backend rollingRecetas')
-})
+app.use('/api', recetasRouter);
